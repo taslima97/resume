@@ -1,0 +1,44 @@
+[
+    {
+        "category": "Group Sports",
+        "name": "Basketball",
+        "image": "basketball.jpg",
+        "price": 19.99,
+        "rating": 4.5
+    },
+    {
+        "category": "Group Sports",
+        "name": "Soccer",
+        "image": "soccer.jpg",
+        "price": 14.99,
+        "rating": 4.2
+    },
+    {
+        "category": "Single Sports",
+        "name": "Tennis",
+        "image": "tennis.jpg",
+        "price": 29.99,
+        "rating": 4.7
+    },
+    {
+        "category": "Single Sports",
+        "name": "Golf",
+        "image": "golf.jpg",
+        "price": 49.99,
+        "rating": 4.9
+    },
+    {
+        "category": "Combat Sports",
+        "name": "Boxing",
+        "image": "boxing.jpg",
+        "price": 39.99,
+        "rating": 4.6
+    },
+    {
+        "category": "Combat Sports",
+        "name": "Martial Arts",
+        "image": "martial_arts.jpg",
+        "price": 24.99,
+        "rating": 4.4
+    }
+]

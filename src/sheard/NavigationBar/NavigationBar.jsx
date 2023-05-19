@@ -1,18 +1,34 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/images/angrybard.png'
+import { useContext } from "react";
+import { AuthContext } from "../../page/Provider/AuthProvider";
+
+
 
 const NavigationBar = () => {
+
+const { user, logOut } = useContext(AuthContext)
+
+const handelLogOut = () =>{
+  logOut()
+  .then(()=>{
+
+  })
+  .catch(error =>{
+    console.log(error)
+  })
+}
+
   const navItem = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/blog'>Blog</Link></li>
     <li><Link to='/alltoys'>All Toys</Link></li>
+    
+    {user ? <>
     <li><Link to='/Mytoys'>My Toys</Link></li>
     <li><Link to='/addtoys'>Add Toys</Link></li>
-
-    {/* {user?.email ? <>
-    <li><Link to='/bookings'>My bookings</Link></li>
-    <li><button>logOut</button></li>
-  </>:<li><Link to='/login'>Login</Link></li>} */}
+    <li><button onClick={handelLogOut}>logOut</button></li>
+  </>:<li><Link to='/login'>LogIn</Link></li>}
 
   </>
   return (

@@ -46,7 +46,7 @@ const handelDetails =(details)=>{
                             <tbody key={singleData._id}>
                                 <tr>
                                     <th>{i + 1}</th>
-                                    <td>{}</td>
+                                    <td>{singleData.seller}</td>
                                     <td>{singleData.name}</td>
                                     <td>{singleData.price}</td>
                                     <td>{singleData.quantity}</td>

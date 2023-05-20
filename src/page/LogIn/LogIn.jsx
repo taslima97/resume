@@ -66,9 +66,9 @@ const LogIn = () => {
                                 <input className='btn btn-error' type="submit" value="Login" />
                             </div>
                         </form>
-                        <p>New to car doctor <Link className='text-orange-600 font-bold text-center' to='/register'>SignUp</Link></p>
+                        <p>New to toy-store <Link className='text-orange-600 font-bold text-center' to='/register'>SignUp</Link></p>
                         <div>
-                        <button className='me-4' onClick={handelGoggle}> <FaGoogle className='mb-1 me-2'></FaGoogle>logIn from goggle</button>
+                        <button className='bg-red-400 p-4 w-48 flex justify-center items-center rounded-lg' onClick={handelGoggle}> <FaGoogle className='mb-1 me-2'></FaGoogle>logIn from goggle</button>
                         </div>
                     </div>
                 </div>

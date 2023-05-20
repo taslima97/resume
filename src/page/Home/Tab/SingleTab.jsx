@@ -1,4 +1,9 @@
+// import React from 'react';
 import { Link } from "react-router-dom";
+
+import ReactStarsRating from 'react-awesome-stars-rating';
+
+
 
 
 const SingleTab = ({ data }) => {
@@ -12,7 +17,10 @@ const SingleTab = ({ data }) => {
                     <p>{category}</p>
                     <div className="flex justify-between ">
                         <p>Price: ${price}</p>
+                        <div className="flex">
+                        <ReactStarsRating className=' flex' style={{ maxWidth: 150 }} value={rating} readOnly />
                         <p>{rating}</p>
+                        </div>
                     </div>
                     <div className="card-actions justify-end">
                         <Link to={`/addtoy/${_id}`} className="bg-red-300 p-4 rounded-lg"><button>view details</button></Link>

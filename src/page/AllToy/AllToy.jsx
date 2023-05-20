@@ -11,7 +11,7 @@ const [modal, setModal] = useState('')
  
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltab/text')
+        fetch('https://toy-store-server-tawny.vercel.app/alltab/text')
             .then(res => res.json())
             .then(data => {
                 setAlldata(data)

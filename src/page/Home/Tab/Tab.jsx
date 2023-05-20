@@ -9,7 +9,7 @@ const Tab = () => {
     const [active, setActive] = useState('Single Sports')
     console.log(active)
     useEffect(() => {
-        fetch(`http://localhost:5000/alltab/${active}`)
+        fetch(`https://toy-store-server-tawny.vercel.app/alltab/${active}`)
             .then(res => res.json())
             .then(data => {
                 setDatas(data)

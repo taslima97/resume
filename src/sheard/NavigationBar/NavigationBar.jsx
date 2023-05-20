@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/images/angrybard.png'
 import { useContext } from "react";
 import { AuthContext } from "../../page/Provider/AuthProvider";
-
+import pro from '../../assets/images/baby.jpg'
 const NavigationBar = () => {
 
 const { user, logOut } = useContext(AuthContext)
@@ -59,7 +59,7 @@ const handelLogOut = () =>{
       <div className="navbar-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <img src={pro}/>
           </div>
         </label>
       </div>

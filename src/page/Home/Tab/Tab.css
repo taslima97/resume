@@ -1,0 +1,12 @@
+.tab{
+    background-color: rgb(204, 112, 127) ;
+    color: white;
+ }
+
+ .active{
+    background-color: gainsboro;
+ }
+
+a:hover {
+    background-color: rgb(116, 150, 203);
+  }

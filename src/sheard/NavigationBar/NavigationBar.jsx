@@ -3,8 +3,6 @@ import logo from '../../assets/images/angrybard.png'
 import { useContext } from "react";
 import { AuthContext } from "../../page/Provider/AuthProvider";
 
-
-
 const NavigationBar = () => {
 
 const { user, logOut } = useContext(AuthContext)
@@ -19,6 +17,7 @@ const handelLogOut = () =>{
   })
 }
 
+
   const navItem = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/blog'>Blog</Link></li>
@@ -26,7 +25,7 @@ const handelLogOut = () =>{
     
     {user ? <>
     <li><Link to='/Mytoys'>My Toys</Link></li>
-    <li><Link to='/addtoys'>Add Toys</Link></li>
+    <li><Link to='/addtoy'>Add Toys</Link></li>
     <li><button onClick={handelLogOut}>logOut</button></li>
   </>:<li><Link to='/login'>LogIn</Link></li>}
 

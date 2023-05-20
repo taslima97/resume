@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
+import {FaGoogle} from 'react-icons/fa';
 
 const LogIn = () => {
-    const {logIn} = useContext(AuthContext)
+    const {logIn, googleSignIn} = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate()
 
@@ -29,6 +29,17 @@ const LogIn = () => {
                 console.log(error)
             })
     }
+
+    const handelGoggle = () => {
+        googleSignIn()
+            .then(result => {
+                const goggleUser = result.user;
+                console.log(goggleUser)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    };
     
     return (
         <div className="w-1/2 mx-auto">
@@ -56,7 +67,9 @@ const LogIn = () => {
                             </div>
                         </form>
                         <p>New to car doctor <Link className='text-orange-600 font-bold text-center' to='/register'>SignUp</Link></p>
-                        
+                        <div>
+                        <button className='me-4' onClick={handelGoggle}> <FaGoogle className='mb-1 me-2'></FaGoogle>logIn from goggle</button>
+                        </div>
                     </div>
                 </div>
     );

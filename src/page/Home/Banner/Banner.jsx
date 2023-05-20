@@ -1,10 +1,13 @@
 import {FiArrowUpRight} from 'react-icons/fi';
-
+import image1 from '../../../assets/images/sports-1.png'
+import image2 from '../../../assets/images/sports-2.png'
+import image3 from '../../../assets/images/sport-3.jpg'
+import image4 from '../../../assets/images/sports-4.jpg'
 const Banner = () => {
     return (
         <div className="carousel w-full h-[600px]">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src='' className="w-full rounded-xl" />
+                <img src={image1} className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center top-0 bottom-0 bg-gradient-to-r from-[#f1b3b3] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-7 mx-auto  text-center'>
                         <h3 className='text-6xl font-bold '>It is good
@@ -22,7 +25,7 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
-                <img src='' className="w-full rounded-xl" />
+                <img src={image2} className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center top-0 bottom-0 bg-gradient-to-r from-[#f1b3b3] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-7 mx-auto  text-center'>
                         <h3 className='text-6xl font-bold '>It is good
@@ -40,7 +43,7 @@ const Banner = () => {
         </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
-                <img src='' className="w-full rounded-xl" />
+                <img src={image3} className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center top-0 bottom-0 bg-gradient-to-r from-[#f1b3b3] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-7 mx-auto  text-center'>
                         <h3 className='text-6xl font-bold '>It is good
@@ -58,7 +61,7 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
-                <img src='' className="w-full rounded-xl" />
+                <img src={image4} className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center top-0 bottom-0 bg-gradient-to-r from-[#f1b3b3] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-7 mx-auto  text-center'>
                         <h3 className='text-6xl font-bold '>It is good

@@ -1,11 +1,14 @@
 
 import { useEffect, useState } from "react";
-// import AddFrom from "../AddFrom/AddFrom";
+import Details from "../Details/Details";
+
+
 
 const AllToy = () => {
     const [alldata, setAlldata] = useState([]);
+const [modal, setModal] = useState('')
 
-console.log(alldata)
+ 
 
     useEffect(() => {
         fetch('http://localhost:5000/alltab/text')
@@ -13,7 +16,15 @@ console.log(alldata)
             .then(data => {
                 setAlldata(data)
             })
-    }, [])
+    }, []);
+
+const handelDetails =(details)=>{
+    setModal(details)
+
+
+}
+
+
     return (
         <div className="overflow-x-auto">
             <table className="table w-3/4 mx-auto">
@@ -40,13 +51,16 @@ console.log(alldata)
                                     <td>{singleData.price}</td>
                                     <td>{singleData.quantity}</td>
                                     <td>{singleData.category}</td>
-                                    <button className="bg-slate-300 p-2">Details</button>
+                                    <label onClick={()=>handelDetails(singleData)} htmlFor={singleData._id} className="btn">details</label>
+                                    
                                 </tr>
                             </tbody>)
                     }
                 
             </table>
+         <Details modal={modal}></Details>
         </div>
+        
     );
 };
 

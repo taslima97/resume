@@ -15,7 +15,7 @@ const SingleTab = ({ data }) => {
                         <p>{rating}</p>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link to={`/addtoy/${_id}`} className="bg-red-300 p-4 rounded-lg">view details</Link>
+                        <Link to={`/addtoy/${_id}`} className="bg-red-300 p-4 rounded-lg"><button>view details</button></Link>
                     </div>
                 </div>
             </div>

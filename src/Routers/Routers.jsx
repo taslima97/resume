@@ -8,6 +8,9 @@ import Register from "../page/Register/Register";
 import LogIn from "../page/LogIn/LogIn";
 
 import AllToy from "../page/AllToy/AllToy";
+import PriveteRout from "./PriveteRout";
+import AddFrom from "../page/AddFrom/AddFrom";
+import MyToys from "../page/MyToys/MyToys";
 
 
 
@@ -37,13 +40,18 @@ const router = createBrowserRouter([
            },
            {
             path:'/alltoys',
-            element:<AllToy></AllToy>,
+            element:<PriveteRout><AllToy></AllToy></PriveteRout>,
            
            },
-          //  {
-          //   path:'/addtoy/:id',
-          //   element:<AddFrom></AddFrom>
-          //  }
+           {
+            path:'/addtoy',
+            element:<AddFrom></AddFrom>,
+           
+           },
+           {
+            path:'/mytoys',
+            element:<MyToys></MyToys>
+           }
          ]
       }
    ])

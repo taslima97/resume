@@ -6,6 +6,7 @@ import ReactStarsRating from 'react-awesome-stars-rating';
 
 
 
+
 const SingleTab = ({ data }) => {
     const {_id, name, category, image, price, rating} = data || {};
     return (
@@ -27,6 +28,7 @@ const SingleTab = ({ data }) => {
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 };

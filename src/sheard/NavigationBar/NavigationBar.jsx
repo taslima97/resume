@@ -24,7 +24,7 @@ const handelLogOut = () =>{
     <li><Link to='/alltoys'>All Toys</Link></li>
     
     {user ? <>
-    <li><Link to='/Mytoys'>My Toys</Link></li>
+    <li><Link to='/mytoys'>My Toys</Link></li>
     <li><Link to='/addtoy'>Add Toys</Link></li>
     <li><button onClick={handelLogOut}>logOut</button></li>
   </>:<li><Link to='/login'>LogIn</Link></li>}

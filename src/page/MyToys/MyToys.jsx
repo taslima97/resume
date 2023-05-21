@@ -9,13 +9,31 @@ const MyToys = () => {
   console.log(user)
     const [toys, setToys] = useState([])
 
-    const url = `http://localhost:5000/insertToy?email=${user?.email}`;
+    const url = `https://toy-store-server-tawny.vercel.app/insertToy?email=${user?.email}`;
 
     useEffect(()=>{
         fetch(url)
         .then(res =>res.json())
         .then(data=>setToys(data))
     },[])
+
+    const handelDelete = id =>{
+      const proceed = confirm('are sure you want to delete')
+      if (proceed) {
+        fetch(`http://localhost:5000/insertToy/${id}`,{
+    method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          if (data.deletedCount>0) {
+            alert('delete successful')
+            const remaining = toys.filter(toy=>toy._id !== id);
+            setToys(remaining);
+          }
+        })
+      }
+    }
+    
  
     return (
         <div className="overflow-x-auto w-full">
@@ -38,7 +56,7 @@ const MyToys = () => {
     </thead>
     <tbody>
       {
-        toys.map(toy=><ToyFrom key={toy._id} toy={toy}></ToyFrom>)
+        toys.map(toy=><ToyFrom key={toy._id} toy={toy} handelDelete={handelDelete}></ToyFrom>)
       }
       </tbody>
     

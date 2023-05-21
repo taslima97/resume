@@ -20,7 +20,7 @@ const MyToys = () => {
     const handelDelete = id =>{
       const proceed = confirm('are sure you want to delete')
       if (proceed) {
-        fetch(`http://localhost:5000/insertToy/${id}`,{
+        fetch(`https://toy-store-server-tawny.vercel.app/insertToy/${id}`,{
     method:'DELETE'
         })
         .then(res=>res.json())
@@ -36,7 +36,7 @@ const MyToys = () => {
 
 
     const handelUpdate = id => {
-      fetch(`http://localhost:5000/insertToy/${id}`,{
+      fetch(`https://toy-store-server-tawny.vercel.app/insertToy/${id}`,{
         method:'PATCH',
         headers:{
           'content-type':'application/json'

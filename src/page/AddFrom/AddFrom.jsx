@@ -35,7 +35,7 @@ const AddFrom = () => {
 
         }
         // console.log(insertedData)
-        fetch('http://localhost:5000/insertToy', {
+        fetch('https://toy-store-server-tawny.vercel.app/insertToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

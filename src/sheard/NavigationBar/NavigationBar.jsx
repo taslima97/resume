@@ -36,7 +36,7 @@ const handelLogOut = () =>{
         <div className="flex-1 flex items-center">
           <div className="avatar">
             <div className="w-20 mask mask-squircle">
-              <img src={logo} />
+             {user && <img src={logo} />}
             </div>
           </div>
           <h2 className="text-2xl font-bold text-purple-900 ml-2">Toys-Store</h2>

@@ -1,7 +1,7 @@
 import altimg from '../../assets/images/sports-1.png'
 
-const ToyFrom = ({toy, handelDelete}) => {
-    const {_id, seller, category, price, quantity, image,} = toy;
+const ToyFrom = ({toy, handelDelete, handelUpdate}) => {
+    const {_id, seller, category, price, quantity, image, status} = toy;
 
 
 
@@ -33,7 +33,10 @@ const ToyFrom = ({toy, handelDelete}) => {
         <td>{category}</td>
         <td>{quantity}</td>
         <td>{price}</td>
-        <td><button>Edit</button></td>
+        <th>{
+          status==='confirm'?<span>confirm</span>:
+          <button onClick={()=>handelUpdate(_id)}>Edit</button>}
+        </th>
         <th>
           <button onClick={()=>handelDelete(_id)} className="btn btn-ghost btn-xs">Delete</button>
         </th>

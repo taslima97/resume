@@ -33,6 +33,29 @@ const MyToys = () => {
         })
       }
     }
+
+
+    const handelUpdate = id => {
+      fetch(`http://localhost:5000/insertToy/${id}`,{
+        method:'PATCH',
+        headers:{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify({status: 'confirm'})
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data);
+        if (data.modifiedCount>0) {
+          // update
+          const remaining = toys.filter(toy=>toy._id !== id);
+          const updated = toys.find(toy=>toy._id === id);
+          updated.status='confirm'
+          const newToys = [updated, ...remaining]
+          setToys(newToys)
+        }
+      })
+    }
     
  
     return (
@@ -56,7 +79,7 @@ const MyToys = () => {
     </thead>
     <tbody>
       {
-        toys.map(toy=><ToyFrom key={toy._id} toy={toy} handelDelete={handelDelete}></ToyFrom>)
+        toys.map(toy=><ToyFrom key={toy._id} toy={toy} handelDelete={handelDelete} handelUpdate={handelUpdate}></ToyFrom>)
       }
       </tbody>
     

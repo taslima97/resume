@@ -45,12 +45,12 @@ const router = createBrowserRouter([
            },
            {
             path:'/addtoy',
-            element:<AddFrom></AddFrom>,
+            element:<PriveteRout><AddFrom></AddFrom></PriveteRout>,
            
            },
            {
             path:'/mytoys',
-            element:<MyToys></MyToys>
+            element:<PriveteRout><MyToys></MyToys></PriveteRout>
            }
          ]
       }
